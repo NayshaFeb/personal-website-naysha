@@ -42,7 +42,7 @@ echo "</div></div>";
 </div>
 </main>
 <!-- Footer -->
-<footer class="bg-blue-800 text-white text-center py-4 mt-10">
+<footer class="bg-orange-800 text-white text-center py-4 mt-10">
 &copy; <?php echo date('Y'); ?> | Created by Naysha febriyana
 </footer>
 </body>

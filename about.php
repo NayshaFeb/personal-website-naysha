@@ -1,73 +1,44 @@
-<?php
-include('../koneksi.php');
-session_start();
-if (!isset($_SESSION['username'])) {
-header('location:login.php');
-exit;
-}
-?>
+<?php include "koneksi.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<title>Kelola About</title>
+<meta charset="UTF-8">
+<title>About | Personal Web</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-orange-100 text-orange-200 font-sans">
 <!-- Header -->
-<header class="bg-orange-900 text-white text-center py-6 shadow">
-<h1 class="text-3xl font-bold">Kelola Halaman About</h1>
+<header class="bg-orange-900 text-white text-center p-6 text-2xl font-bold">
+About Me | Naysha febriyana
 </header>
-<div class="flex max-w-7xl mx-auto mt-8 px-4">
-<!-- Sidebar -->
-<aside class="w-1/4 bg-white rounded shadow p-4">
-<h2 class="text-xl font-semibold text-blue-700 mb-4 textcenter">MENU</h2>
-<ul class="space-y-2 text-gray-700">
-<li><a href="beranda_admin.php" class="block hover:text-blue-
-600">Beranda</a></li>
-<li><a href="data_artikel.php" class="block hover:text-blue-
-600">Kelola Artikel</a></li>
-<li><a href="data_gallery.php" class="block hover:text-blue-
-600">Kelola Gallery</a></li>
-<li><a href="about.php" class="block font-semibold text-blue-
-800">About</a></li>
-<li>
-<a href="logout.php" onclick="return confirm('Apakah anda yakin ingin keluar?');"
-class="block text-red-600 hover:underline fontmedium">Logout</a>
-</li>
+<!-- Navigation -->
+<nav class="bg-orange-700 text-white py-3">
+<ul class="flex justify-center space-x-10 font-medium text-lg">
+<li><a href="index.php" class="hover:underline">Artikel</a></li>
+<li><a href="gallery.php" class="hover:underline">Gallery</a></li>
+<li><a href="about.php" class="hover:underline">About</a></li>
+<li><a href="admin/login.php" class="hover:underline">Login</a></li>
 </ul>
-</aside>
- <!-- Main Content -->
-<main class="w-3/4 bg-white rounded shadow p-6 ml-6">
-<div class="flex justify-between items-center mb-4">
-<h2 class="text-xl font-bold text-gray-800">Tentang Saya</h2>
-<a href="add_about.php"
-class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 
-transition">+ Tambah Data</a>
-</div>
-<div class="space-y-4">
+</nav>
+<!-- About Content -->
+<main class="max-w-3xl mx-auto p-6 bg-orange rounded shadow mt-8">
+<h2 class="text-xl font-bold mb-4 text-blue-700">Tentang Saya</h2>
+<div class="space-y-6">
 <?php
 $sql = "SELECT * FROM tbl_about ORDER BY id_about DESC";
 $query = mysqli_query($db, $sql);
 while ($data = mysqli_fetch_array($query)) {
-echo "<div class='p-4 bg-gray-50 border rounded shadow'>";
-echo "<p class='mb-3'>" . htmlspecialchars($data['about']) . 
-"</p>";
-echo "<div class='flex space-x-4 text-sm'>";
-echo "<a href='edit_about.php?id_about={$data['id_about']}' 
-class='text-blue-600 hover:underline'>Edit</a>";
-echo "<a href='delete_about.php?id_about={$data['id_about']}' 
-onclick='return confirm(\"Yakin ingin menghapus?\")' class='text-red-600 
-hover:underline'>Hapus</a>";
-echo "</div></div>";
+echo "<div>";
+echo "<p class='text-gray-700'>" . htmlspecialchars($data['about'])
+. "</p>";
+echo "</div>";
 }
 ?>
 </div>
 </main>
-</div>
 <!-- Footer -->
 <footer class="bg-orange-500 text-white text-center py-4 mt-10">
-&copy; <?php echo date('Y'); ?> | Created by Nayasha Febriyana
+&copy; <?php echo date('Y'); ?> | Created by Naysha febriyana
 </footer>
 </body>
 </html>
