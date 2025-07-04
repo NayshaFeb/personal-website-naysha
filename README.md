@@ -1,4 +1,6 @@
-# personal-website-nayshaDeskripsi
+# personal-website-naysha
+
+Deskripsi
 
 
 Studi kasus ini bertujuan untuk memenuhi tugas akhir di semster 2 sebagai ulangan akhir semester mata kuliah dasar programan dan juga membangun website personal dinamis milik Naysha Febriyana. Website ini memungkinkan pemilik mengelola konten artikel, galeri, dan informasi pribadi secara mandiri melalui halaman admin. Aplikasi dikembangkan menggunakan PHP dan MySQL, dengan tampilan sederhana berwarna pink dan putih yang konsisten dan feminim.
