@@ -87,7 +87,8 @@ Halaman Home / Artikel
 Halaman ini merupakan tampilan utama yang menyajikan daftar artikel terbaru yang telah dipublikasikan.
 Terdiri dari dua kolom
 
-![Screenshot 2025-07-03 140938](https://github.com/user-
+
+![Screenshot 2025-07-03 140938](https://github.com/user-attachments/assets/e9dfee5d-b871-4b89-8f9a-7dce2251024c)
 
 Halaman Gallery
 Halaman Gallery menampilkan berbagai foto pribadi atau momen penting pemilik web. Dalam halaman ini, ditampilkan galeri foto 
